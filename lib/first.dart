@@ -26,7 +26,7 @@ class first extends StatelessWidget {
           ),
           Row(
             children: [
-              Text("Pizzel 250 = "),
+              Text("Pizzel 200 = "),
               Obx(() => Checkbox(
                 value: m.check2.value,
                 onChanged: (value) {
@@ -38,7 +38,7 @@ class first extends StatelessWidget {
           ),
           Row(
             children: [
-              Text("pasta 250 = "),
+              Text("pasta 100 = "),
               Obx(() => Checkbox(
                 value: m.check3.value,
                 onChanged: (value) {
@@ -49,7 +49,8 @@ class first extends StatelessWidget {
               ))
             ],
           ),
-          Container(height: 190,width: 100,color: Colors.yellow,)
+          Obx(() => Container(
+            child: Text("${m.ans}",style: TextStyle(fontSize: 50),),height: 100,width: 100,color: Colors.yellow,))
         ],
       ),
     );
